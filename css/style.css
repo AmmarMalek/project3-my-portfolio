@@ -1,0 +1,282 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    color: white;
+}
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../img/banner.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    padding: 0px 80px;
+    background-attachment: fixed;
+}
+.banner .navbar{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    align-items: center;
+    padding-top: 30px;
+}
+.banner .navbar .nav-right ul li{
+    display: inline;
+    list-style: none;
+    padding: 30px;
+}
+.banner .navbar .nav-right ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    padding: 10px 0px;
+}
+.banner .heading{
+    text-align: center;
+    padding: 150px 0px;
+}
+.banner .heading .web-dev{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.banner .heading h1{
+    font-size: 60px;
+}
+.banner .heading h1 span{
+    color: #FD4766;
+}
+.banner .heading button{
+    text-transform: uppercase;
+    background: none;
+    font-size: 16px;
+    border: 1px solid gray;
+    padding: 15px 35px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.banner .heading button:hover{
+    background-color: white;
+    color: black;
+}
+.a-after::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.a-after:hover::after{
+    width: 100%;
+}
+.text-anim{
+    background: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, #FD4766 79.69%);
+    font-weight: 600;
+    color: transparent;
+    background-clip: text;
+	-webkit-background-clip: text;
+    font-size: 16px;
+}
+
+/* about me style */
+.aboutme{
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-gap: 50px;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 120px 80px;
+    background-color: black;
+}
+.aboutme .profile-pic img{
+    border-radius: 15px;
+    object-fit: cover;
+}
+.aboutme .details h1{
+    font-size: 45px;
+    margin-top: 25px;
+}
+.aboutme .details h6{
+    font-size: 25px;
+    margin-top: 25px;
+}
+.aboutme .details p,.aboutme .details ul li{
+    color: gray;
+}
+.aboutme .details ul{
+    margin-left: 15px;
+}
+
+/* project style */
+.project{
+    background-color: #191919;
+    padding: 120px 80px;
+    text-align: center;
+}
+.project h1{
+    font-size: 50px;
+}
+.project p{
+    color: gray;
+}
+.project .projects{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.project .projects .project-box::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(253,71,102,0.5));
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 8px;
+}
+.project .projects .project-box{
+    border-radius: 8px;
+    padding: 350px 30px 40px 30px;
+    text-align: left;
+    transition: 0.5s;
+    position: relative;
+}
+.project .projects .project1{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(../img/project1.png);
+    transition: 0.5s;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.project .projects .project2{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(../img/project2.png);
+    transition: 0.5s;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.project .projects .project3{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(../img/project3.jpg);
+    transition: 0.5s;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.project .projects .project-box button{
+    background:none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 12px;
+    letter-spacing: 0px;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+.project .projects .project-box:hover::after{
+    opacity: 1;
+ }
+.project .projects .project-box:hover{
+     transform: scale(1.05);
+ }
+ .project button{
+    background-color: #FD4766;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid #FD4766;
+    transition: 0.5s;
+}
+.project button:hover{
+    background: none;
+}
+
+/* hire style */
+.hire{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 120px 80px;
+}
+.hire .hire-form{
+    text-align: left;
+}
+.hire .hire-form h1{
+    font-size: 50px;
+}
+.hire .hire-form p{
+    color: gray;
+}
+.hire .hire-form  input, .hire .hire-form  textarea{
+    background: none;
+    border: 1px solid rgba(198, 201, 216, 0.75);
+    padding: 10px;
+    width: 560px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.hire .hire-form button{
+    background-color: #FD4766;
+    border: 1px solid #FD4766;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.hire .hire-form button:hover{
+    background: none;
+    color: #FD4766;
+}
+.hire .hire-form p{
+    margin-top: 20px;
+}
+.hire .hire-img img{
+    border-radius: 15px;
+}
+
+/* footer style */
+.footer{
+    background-color: #191919;
+    padding: 20px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    justify-content: center;
+}
+.footer .social-link ul li{
+    list-style: none;
+    display: inline;
+    padding-left: 20px;
+}
+.footer .social-link ul li a i{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(198, 201, 216, 0.75);
+}
+.footer .social-link ul li a i:hover{
+    background-color: #FD4766;
+    border: 1px solid #FD4766;
+}
+.footer .copyright p{
+    color: rgba(198, 201, 216, 0.75);
+    font-size: 14px;
+    text-align: right;
+    text-indent: 20px;
+}
