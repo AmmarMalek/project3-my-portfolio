@@ -135,6 +135,15 @@ a{
     align-items: center;
     justify-content: center;
 }
+.project .projects .project-box{
+    position: relative;
+    transition: 0.5s;
+    border-radius: 8px;
+    text-align: left;
+}
+.project .projects .project-box:hover{
+    transform: scale(1.05);
+}
 .project .projects .project-box::after{
     content: "";
     width: 100%;
@@ -145,31 +154,37 @@ a{
     left: 0;
     opacity: 0;
     border-radius: 8px;
+    z-index: 1;
 }
-.project .projects .project-box{
-    border-radius: 8px;
-    padding: 350px 30px 40px 30px;
-    text-align: left;
-    transition: 0.5s;
-    position: relative;
+.project .projects .project-box:hover::after{
+    opacity: 1;
 }
 .project .projects .project1{
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(../img/project1.png);
     transition: 0.5s;
-    background-size: 100% 100%;
+    background-size: 120% 120%;
     background-position: center;
+    padding: 350px 30px 40px 30px;
+    border-radius: 8px;
+}
+.project .projects .project-box:hover .pro{
+    background-size: 100% 100%;
 }
 .project .projects .project2{
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(../img/project2.png);
     transition: 0.5s;
-    background-size: 100% 100%;
+    background-size: 120% 120%;
+    padding: 350px 30px 40px 30px;
     background-position: center;
+    border-radius: 8px;
 }
 .project .projects .project3{
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url(../img/project3.jpg);
     transition: 0.5s;
-    background-size: 100% 100%;
+    background-size: 120% 120%;
+    padding: 350px 30px 40px 30px;
     background-position: center;
+    border-radius: 8px;
 }
 .project .projects .project-box button{
     background:none;
@@ -181,12 +196,6 @@ a{
     border-radius: 0px;
     transition: 0.5s;
 }
-.project .projects .project-box:hover::after{
-    opacity: 1;
- }
-.project .projects .project-box:hover{
-     transform: scale(1.05);
- }
  .project button{
     background-color: #FD4766;
     padding: 15px 40px;
